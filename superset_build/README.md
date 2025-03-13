@@ -3,4 +3,11 @@
 ```bash
 # Build the image
 docker build -t superset-build .
+# Secret key should be changed and kept secret, not published to GitHub :)
+docker run -d -v ${PWD}:/data:rw -p 8080:8088 -e "SUPERSET_SECRET_KEY=your_new_secret_key" --name superset <replace with image name we created last time. i.e. my/superset:duckdb - see docker images for list>
+# Update user, firstname, lastname, email and password as you see fit
+docker exec -it superset superset fab create-admin --username admin --firstname Admin --lastname Superset --email admin@example.com --password admin
+docker exec -it superset superset db upgrade
+docker exec -it superset superset init
+
 ```
