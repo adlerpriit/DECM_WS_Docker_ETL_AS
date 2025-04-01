@@ -46,7 +46,7 @@ def fetch_air_year(station_id, year):
         first_day, last_day = get_first_and_last_day_of_month(year, month)
         print(f'Fetching data from {first_day} to {last_day}, included')
         monthdata = fetch_air_range(station_id, first_day, last_day)
-        with open(f'csv/air_{station_id}_{year}_{month}.csv', 'w') as f:
+        with open(f'data/csv/air_{station_id}_{year}_{month}.csv', 'w') as f:
             f.write(monthdata)
 
 for year in range(args.start, args.stop+1):
