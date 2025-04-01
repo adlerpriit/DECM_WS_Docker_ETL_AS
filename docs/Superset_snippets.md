@@ -64,7 +64,7 @@ WindSpeed AS (
 SELECT * FROM WindSpeed;
 ```
 
-This query creates a new dataset that calculates the average wind speed (`WS10`) for each wind direction (`N`, `NE`, `E`, `SE`, `S`, `SW`, `W`, `NW`). The `WITH` clause is used to create temporary tables (CTEs) that help in organizing the data transformation process. The final `SELECT` statement retrieves the daily averages for each direction.
+This query creates a new dataset that calculates the average wind speed (`WS10`) for each wind direction (`N`, `NE`, `E`, `SE`, `S`, `SW`, `W`, `NW`). The `WITH` clause is used to create temporary tables (CTEs) that help in organizing the data transformation process. The final `SELECT` statement retrieves the averages for each direction (although in our case the average is not strictly required, as each timestamp has only one value, `SQL` required grouping or summary function here in case that is not true).
 
 ## Hack for month name ordering
 
