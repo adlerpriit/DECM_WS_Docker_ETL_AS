@@ -2,3 +2,10 @@ requests
 pandas
 pyarrow
 openpyxl
+
+dbt-core==1.9.4
+dbt-duckdb
+
+apache-airflow[celery]==2.10.5 --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.10.5/constraints-3.12.txt"
+astronomer-cosmos
+

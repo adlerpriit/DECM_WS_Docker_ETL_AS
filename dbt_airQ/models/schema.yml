@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: airQ
+    description: "weather data from the Air quality data"
+    columns:
+      - name: DateTime
+        description: "The datetime of measeurment"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: airQ_windDirections
+    description: "separate wind direction into bins for specific plot"
+    columns:
+      - name: DateTime
+        description: "The datetime of measeurment"
+        data_tests:
+          - unique
+          - not_null

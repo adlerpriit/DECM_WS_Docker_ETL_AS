@@ -1,0 +1,9 @@
+dbt_airQ:
+  outputs:
+    dev:
+      type: duckdb
+      path: /workspaces/DECM_WS_Docker_ETL_AS/data/dev.duckdb
+      threads: 1
+
+  target: dev
+

@@ -12,7 +12,9 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pip3 install --user -r requirements.txt"
+	"postCreateCommand": "pip3 install --user -r requirements.txt",
+
+	"containerEnv": { "AIRFLOW_HOME": "/workspaces/DECM_WS_Docker_ETL_AS/airflow" }
 
 	// Configure tool-specific properties.
 	// "customizations": {},
