@@ -3,16 +3,10 @@ import datetime
 import requests
 import logging
 
-def get_first_last_day_of_the_month():
-    today = datetime.date.today()
-    first_of_month = today.replace(day=1)
-    last_of_month = today.replace(day=31)
-    return first_of_month, last_of_month
-
 @dag(
     dag_id="download_airQ",
     start_date=datetime.datetime(2023, 1, 1),
-    schedule_interval="20 * * * *",
+    schedule="20 * * * *",
     catchup=False
 )
 def my_data_download():
